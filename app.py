@@ -35,8 +35,8 @@ def login():
 
             return redirect(url_for('dash'))
 
-    return render_template('login.html')
-
+    return render_template('login.html') #adicionar uma flag que tem no flask de tipo: "Você não tem cadastro"
+    
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
@@ -49,7 +49,7 @@ def register():
         conexao.execute(INSERT, (email, senha))
         conexao.commit()
         conexao.close()
-        return redirect(url_for('dash'))
+        return redirect(url_for('index'))
 
     return render_template('register.html')
 
