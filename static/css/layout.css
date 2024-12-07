@@ -20,10 +20,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(128, 109, 212);
+    /* background-color: rgb(128, 109, 212); */
+    background-color: #3f2186;
 }
 
-.forms {
+.forms, .forms-index {
     display: flex;
     background-color: rgb(255, 255, 255);
     flex-direction: column;
@@ -34,8 +35,8 @@ body {
     border-radius: 12px;
 }
 
-.forms h1 {
-    text-align: center;
+.forms-index h1 {
+    color: #3f2186;
 }
 
 .dados {
@@ -44,6 +45,14 @@ body {
     height: 70%;
     /* background-color: blueviolet; */
     justify-content: space-around;
+    align-items: center;
+}
+.rotas {
+    display: flex;
+    width: 80%;
+    height: 70%;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -69,6 +78,20 @@ body {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin: 5px;
+    cursor: pointer;
+}
+
+.rotas button{
+    background-color: #512da8;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 15px;
     cursor: pointer;
 }
 
