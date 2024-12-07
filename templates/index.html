@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/layout.css">
     <title>Inicial</title>
 </head>
 <body>
     <div class="container">
-        <div class="nav">
-            <h1>Projeto Redes</h1>
+        <div class="forms-index">
+            <h1>
+                Projeto Redes
+            </h1>
             <div class="rotas">
-                <a href="{{url_for('login')}}">Login</a>
-                <a href="{{url_for('register')}}">Register</a>
+                <a href="{{url_for('login')}}"><button>Login</button></a>
+                <a href="{{url_for('register')}}"><button>Cadastro</button></a>          
             </div>
-        </div>
+        </div>             
     </div>
-
+    
 </body>
 </html>
