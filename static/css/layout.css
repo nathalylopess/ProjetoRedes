@@ -81,7 +81,7 @@ body {
     cursor: pointer;
 }
 
-.rotas button{
+.users-list, .rotas button{
     background-color: #512da8;
     color: #fff;
     font-size: 12px;
@@ -112,4 +112,18 @@ body {
     /* background-color: rgb(42, 4, 79); */
     justify-content: center;
     align-items: center;
+}
+
+.users-list .button button{
+    background-color: #fff;
+    color: #512da8 ;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 5px;
+    cursor: pointer;
 }

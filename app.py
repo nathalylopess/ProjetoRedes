@@ -57,8 +57,8 @@ def register():
 @app.route('/dash')
 @login_required
 def dash():
-    return render_template('dash.html')
-
+    usuarios = User.get_all()
+    return render_template('dash.html', usuarios=usuarios)
 
 
 @app.route('/logout', methods=['POST'])

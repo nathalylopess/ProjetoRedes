@@ -22,7 +22,14 @@ class User(UserMixin):
         user = User(dados['email'], dados['senha'])
         user.id = dados['id']
         return user
-
+    
+    @classmethod
+    def get_all(cls):
+        conexao = obter_conexao()
+        SELECT = 'SELECT * FROM usuarios'
+        dados = conexao.execute(SELECT).fetchall()
+        return [dict(dado) for dado in dados]
+    
     @classmethod
     def get_by_email(cls, email):
         conexao = obter_conexao()
