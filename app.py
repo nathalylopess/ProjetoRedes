@@ -1,5 +1,5 @@
 from flask import Flask, render_template \
-    , url_for, request, redirect
+    , url_for, request, redirect, flash, get_flashed_messages
 
 from flask_login import LoginManager \
     , login_required, login_user, logout_user
@@ -30,12 +30,12 @@ def login():
         user = User.get_by_email(email)
 
         if user and user.senha == senha:
-            
             login_user(user)
-
             return redirect(url_for('dash'))
+        else:
+            flash('E-mail ou senha inválidos.')  # Mensagem de erro
 
-    return render_template('login.html') #adicionar uma flag que tem no flask de tipo: "Você não tem cadastro"
+    return render_template('login.html')
     
 
 @app.route('/register', methods=['POST', 'GET'])

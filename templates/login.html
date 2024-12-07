@@ -9,12 +9,23 @@
 </head>
 <body>
     <div class="container">
+
         <div class="forms">
             <h2>
                 LOGIN
             </h2>
             <div class="dados">
                 <form action="{{url_for('login')}}" method="post">
+                    <!-- Mensagens de erro -->
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <div class="alert">
+                            {% for message in messages %}
+                                <p>{{ message }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% endwith %}
                     <label for="text">Email</label>
                     <input type="text" name="email" placeholder="email">
 
