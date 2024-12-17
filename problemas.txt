@@ -1,0 +1,2 @@
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/home/nathrisco/ProjetoRedes/env/lib/python3.11/site-packages/MarkupSafe-3.0.2.dist-info'
+Check the permissions.
